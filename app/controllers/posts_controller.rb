@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :search, :searching]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :set_already_like, only: [:show], if: :user_signed_in?
+  before_action :set_q, only: [:index, :searching]
 
   def index
     @posts = Post.includes(:user).order(created_at: :desc)
@@ -54,7 +55,17 @@ class PostsController < ApplicationController
     @posts = @tag.posts.all
   end
 
+  def searching
+    @results = @q.result.order(created_at: :desc)
+    @tag_list = Tag.all
+  end
+
   private
+
+  def set_q
+    @q = Post.ransack(params[:q])
+  end
+
   def post_params
     params.require(:post).permit(:image, :title, :overview, :programming_languages, :techs, :portfolio_url, :github_url).merge(user_id: current_user.id)
   end

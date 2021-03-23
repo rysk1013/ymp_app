@@ -1,0 +1,9 @@
+<div class="searching-box">
+  <div class="searching-wrapper">
+    <%= search_form_for @q, url: searching_posts_path do |f| %>
+      <%= f.label :title_or_overview_or_programming_languages_or_techs_cont_any, class: "hidden" %>
+      <%= f.search_field :title_or_overview_or_programming_languages_or_techs_cont_any, class: "search-form", placeholder: 'キーワード' %>
+      <%= f.submit '検索', class: "search-btn" %>
+    <% end %>
+  </div>
+</div>

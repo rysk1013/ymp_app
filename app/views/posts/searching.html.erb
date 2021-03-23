@@ -4,12 +4,14 @@
   <div class="container">
     <div class="left-container">
       <div class="post-wrapper">
-        <%= render partial: 'post', collection: @posts %>
+        <% @results.each do |post| %>
+          <%= render partial: "post", locals: {post: post} %>
+        <% end %>
       </div>
     </div>
     <div class="right-container">
-      <%= render partial: 'searching' %>
-      <%= render partial: 'tag_list', locals: {tag_list: @tag_list} %>
+      <%= render 'searching' %>
+      <%= render 'tag_list' %>
     </div>
   </div>
 </div>
