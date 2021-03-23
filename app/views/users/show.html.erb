@@ -57,7 +57,7 @@
         </div>
       </div>
 
-      <% if @user.id == current_user.id %>
+      <% if user_signed_in? && @user.id == current_user.id %>
         <div class="user-show-name">
           <h2>お気に入り</h2>
         </div>    

@@ -23,7 +23,7 @@
     <% if post.user.image.present? %>
       <%= link_to image_tag(post.user.image, class: 'icon-pic'), user_path(post.user.id) %>
     <% else %>
-      <%= image_tag "/default-icon.png", class: "icon-pic" %>
+      <%= link_to image_tag("/default-icon.png", class: "icon-pic"), user_path(post.user.id) %>
     <% end %>
 
     <h3 class="user-name"><%= link_to post.user.nickname, user_path(post.user.id) %></h3>
