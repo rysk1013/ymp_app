@@ -19,6 +19,16 @@
     <h2 class="post-title">
       <%= @post.title %>
     </h2>
+
+    <div class="icon-box">
+      <% if @post.user.image.present? %>
+       <%= link_to image_tag(@post.user.image, class: 'icon-pic'), user_path(@post.user.id) %>
+      <% else %>
+        <%= link_to image_tag("/default-icon.png", class: "icon-pic"), user_path(@post.user.id) %>
+      <% end %>
+
+      <h3 class="user-name"><%= link_to @post.user.nickname, user_path(@post.user.id) %></h3>
+    </div>
   
     <div class="overview-wrapper">
       <h3 class="show-title">&lt;概要&gt;</h3>
