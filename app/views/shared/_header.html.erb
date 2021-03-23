@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="inner">
+    <div class="nav">
+      <div class="nav-left">
+        <%# link_to image_tag("/header-logo.png", class: "logo-img"), root_path %>
+      </div>
+        <div class="nav-right">
+        <% if  user_signed_in? %>
+          <div class="current-user-name">
+            ログインユーザー：
+            <%= link_to current_user.nickname, user_path(current_user.id) %>
+          </div>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-logout" %>
+          <%= link_to "投稿", new_post_path,class: "nav-btn" %>
+        <% else %>
+          <%= link_to "ログイン", new_user_session_path, class: "nav-btn" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "nav-btn" %>
+        <% end %>
+        </div>
+    </div>
+  </div>
+</header>

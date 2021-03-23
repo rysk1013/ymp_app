@@ -1,0 +1,24 @@
+<div class="comment-wrapper">
+  <h3 class="show-title">コメント</h3>
+  <ul class="comments-lists">
+    <% @comments.each do |comment| %>
+      <li class="comments-list">
+        <%= link_to comment.user.nickname, user_path(comment.user.id), class: :comment_user %>: 
+        <%= comment.text %>
+      </li>
+    <% end %>
+    <li class="comments-list hidden" id="list"></li>
+  </ul>
+
+  <% if user_signed_in? %>
+    <%= form_with model: [@post, @comment], id: "form", local: true do |f|%>
+      <div class="field">
+        <%= f.label :text, "コメント記入", class: "show-title" %><br />
+        <%= f.text_area :text, class: :text, id: "content"  %>
+      </div>
+      <div class="submit-btn">
+        <%= f.submit "送信", class: "form-btn comment-submit", id: "submit"  %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

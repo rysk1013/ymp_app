@@ -1,3 +1,5 @@
+<%= render 'shared/header' %>
+
 <div class="main">
   <div class="container">
     <div class="left-container">
@@ -6,16 +8,7 @@
       </div>
     </div>
     <div class="right-container">
-      <div class="tag-list">
-        <h3>タグリスト</h3>
-        <div class="tags">
-          <% @tag_list.each do |list| %>
-            <span class="tag">
-              <%= link_to list.tag_name, tag_posts_path(list.id) %>
-            </span>
-          <% end %>
-        </div>
-      </div>
+      <%= render 'tag_list' %>
     </div>
   </div>
 </div>

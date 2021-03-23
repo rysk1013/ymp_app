@@ -1,0 +1,32 @@
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.btn {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+}
+
+.edit-btn {
+  background-color: #00fa9a;
+  display: block;
+  margin-right: 10px;
+}
+
+.edit-btn:hover {
+  opacity: 0.5;
+}
+
+.destroy-btn {
+  background-color: tomato;
+  display: block;
+}
+
+.destroy-btn:hover {
+  opacity: 0.5;
+}
