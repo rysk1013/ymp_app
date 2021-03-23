@@ -39,3 +39,12 @@
 .url-wrapper h3 {
   margin-bottom: 20px;
 }
+
+.url-wrapper a {
+  color: royalblue;
+  transition: all 0.3s;
+}
+
+.url-wrapper a:hover {
+  opacity: 0.5;
+}

@@ -2,6 +2,7 @@
   box-shadow: 0px 0px 15px #7fbfff;
 }
 
-.input-default:focus-within {
+.input-default:focus-within,
+.form-text:focus-within {
   background-color: #d1ffff;
 } 
