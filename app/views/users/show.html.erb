@@ -1,0 +1,52 @@
+<div class="user-show">
+  <div class="user-show-wrapper">
+    <div class="user-show-upper">
+      <h1 class="user-show-heading">プロフィール</h1>
+      <div class="user-show-name">
+        <h2>ユーザー</h2>
+        <div class="prb"><%= @user.nickname %></div>
+        <% if user_signed_in? && current_user.id == @user.id %>
+          <div class="btn-wrapper user-show-btn">
+            <%= link_to "編集", edit_user_registration_path, class: "btn edit-btn"%>
+            <%= link_to "削除", user_registration_path, method: :delete, class: "btn destroy-btn"%>
+          </div>
+        <% end %>
+      </div>
+      <div class="user-show-profile">
+        <h2>自己紹介</h2>
+        <div class="profile-body">
+          <%= @user.profile %>
+        </div>
+      </div>    
+    </div>
+
+    <div class="user-show-name">
+      <h2>ポートフォリオ</h2>
+    </div>
+    <div class="user-show-middle">
+      <div class="posts">
+        <% @posts.each do |post| %>
+          <% if post.user_id == @user.id %>
+            <div class="content">
+              <%= link_to image_tag(post.image, class: 'user-show-img'), post_path(post.id) %>
+              <h3><%= link_to post.title, post_path(post.id) %></h3>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="user-show-name">
+      <h2>お気に入り</h2>
+    </div>    
+    <div class="user-show-middle">
+      <div class="favos">
+        <div class="content">
+          <%# image_tag 'sample2.jpeg', class: 'user-show-img' %>
+          <div class="user-show-img"></div>
+          <h3>タイトル</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

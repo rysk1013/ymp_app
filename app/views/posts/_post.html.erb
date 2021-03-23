@@ -1,0 +1,31 @@
+<div class="post">
+  <%= link_to image_tag(post.image, class: 'post-img'), post_path(post.id) %>
+  <div class="post-show-tags">
+    <% post.tags.each do |list| %>
+      <span class="tag">
+        <%= link_to list.tag_name, tag_posts_path(list.id) %>
+      </span>
+    <% end %>
+  </div>
+  <h2 class="post-title">
+    <%= link_to post.title, post_path(post.id) %>
+  </h2>
+  <div class="icon-box">
+    <div class="icon"></div>
+    <%# image_tag 'sample1.jpeg', class: 'icon-pic'%>
+    <h3 class="user-name"><%= link_to post.user.nickname, user_path(post.user.id) %></h3>
+  </div>
+  <h3 class="overview-title">概要</h3>
+  <p class="post-overview">
+    <%= post.overview %>
+  </p>
+
+  <div class="likes">
+    <% if post.likes.present? %>
+      <span class="fas fa-star like"></span>
+      <span class="likes-count"><%= post.likes.count %></span>
+    <% else %>
+      <p>＊＊＊いいねはまだありません＊＊＊</p>
+    <% end %>
+  </div>
+</div>
