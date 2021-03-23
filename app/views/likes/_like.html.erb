@@ -1,0 +1,12 @@
+<div class="likes">
+  <% if @already_like.present? %>
+      <%= link_to post_like_path(@post.id, @already_like.id), method: :delete do %>
+        <span class="fas fa-star like"></span>
+      <% end %>
+  <% else %>
+    <%= link_to post_likes_path(@post.id), method: :post do %>
+      <span class="fas fa-star"></span>
+    <% end %>
+  <% end %>
+  <span class="likes-count"><%= @post.likes.count %></span>
+</div>

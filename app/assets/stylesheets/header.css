@@ -1,23 +1,42 @@
-/* -------------- ヘッダー -------------- */
 .header {
-  background-color: #f1f8fe;
-  padding: 20px 0;
-
+  background-color: #000;
 }
+
 .inner {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 20px 0 40px;
+  padding: 0 20px 0 20px;
 }
+
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.logo {
-  width: 200px;
+
+.nav-left {
+  border: 2px solid #fff;
+  transition: 0.3s;
 }
-.nav__btn{
+
+.nav-left:hover {
+  opacity: 0.7;
+}
+
+.nav-left a {
+  display: block;
+}
+
+.logo-img {
+  width: 150px;
+  height: 60px;
+}
+
+.nav-right {
+}
+
+.nav-btn {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -28,12 +47,13 @@
   border-radius: 3px;
   transition: 0.4s ease;
 }
-.nav__btn:hover{
+
+.nav-btn:hover {
   color: #fff;
   background: #87CEFA;
 }
 
-.nav__logout{
+.nav-logout {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -41,10 +61,12 @@
   text-decoration: none;
   user-select: none;
 }
-.nav__logout:hover{
+
+.nav-logout:hover {
   opacity: 0.5;
 }
 
 .current-user-name {
   display: inline-block;
+  color: #87CEFA;
 }

@@ -2,7 +2,12 @@
   width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: skyblue;
+  background-color: #ededed;
+  box-shadow: 4px 4px 6px;
+}
+
+.user-show {
+  padding: 30px;
 }
 
 .user-show-upper {
@@ -24,6 +29,22 @@
   border-bottom: 1px solid #333;
 }
 
+.name-img-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.not-correct-user {
+  display: flex;
+  justify-content: space-between;
+  width: 57%;
+}
+
+.prb {
+  padding: 20px;
+  line-height: 75px;
+}
+
 .user-show-name h2 {
   margin-right: 100px;
   padding: 20px;
@@ -31,17 +52,16 @@
 
 .user-show-btn {
   padding: 20px;
-  margin-left: auto;
 }
 
-.prb {
-  padding: 20px;
+.profile-img {
+  width: 200px;
+  height: 115px;
 }
 
 .user-show-profile {
   font-size: 20px;
   padding: 20px;
-  border: 1px solid #333;
 }
 
 .user-show-profile h2 {
@@ -50,11 +70,15 @@
 
 .profile-body {
   padding: 20px;
+  border: 1px solid #333;
+  background-color: #fff;
 }
 
 .user-show-middle {
   background-color: darkgray;
   padding: 20px 20px 0 20px;
+  box-shadow: 4px 4px 6px;
+  transition: all 0.3s;
 }
 
 .posts,
@@ -65,14 +89,27 @@
   justify-content: space-between;
 }
 
+.posts::after,
+.favos::after {
+  display: block;
+  content:"";
+  width: calc((100% - 60px) / 3);
+}
+
 .content {
   width: calc((100% - 60px) / 3);
   height: 366.66px;
   margin-bottom: 20px;
-  background-color: mediumspringgreen;
+  background-color: #ededed;
+  transition: all 0.3s;
 }
 
-.user-show-img {
+.content:hover {
+  opacity: 0.5;
+}
+
+.user-show-img,
+.user-like-img {
   width: 100%;
   height: 80%;
   display: block;
@@ -83,11 +120,3 @@
 .content h3 {
   font-size: 20px;
 }
-
-.posts::after,
-.favos::after {
-  display: block;
-  content:"";
-  width: calc((100% - 60px) / 3);
-  }
-

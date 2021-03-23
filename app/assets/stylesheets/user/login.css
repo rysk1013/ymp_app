@@ -18,8 +18,7 @@
 
 .login-btn {
   width: 50%;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 50px auto 30px;
 }
 
 .login-red-btn {
@@ -32,4 +31,8 @@
   text-align: center;
   cursor: pointer;
   margin-top: 20px;
+}
+
+.login-red-btn:hover {
+  opacity: 0.5;
 }

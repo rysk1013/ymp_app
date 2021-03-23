@@ -1,0 +1,13 @@
+<div class="tag-list shadow">
+  <div class="tag-header">
+    <span class="fas fa-tags"></span>
+    <h3 class="tag-title">タグリスト</h3>
+  </div>
+  <div class="tags">
+    <% @tag_list.each do |list| %>
+      <div class="tag">
+        <%= link_to list.tag_name, tag_posts_path(list.id) %>
+      </div>
+    <% end %>
+  </div>
+</div>
