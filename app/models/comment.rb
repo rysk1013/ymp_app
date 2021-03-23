@@ -2,5 +2,9 @@ class Comment < ApplicationRecord
   belongs_to :post
   belongs_to :user
 
-  validates :text, presence: true
+  with_options presence: true do
+    validates :text
+    validates :post
+    validates :user
+  end
 end
