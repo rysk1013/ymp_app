@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :search, :searching]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :set_already_like, only: [:show], if: :user_signed_in?
-  before_action :set_q, only: [:index, :searching]
+  before_action :set_q, only: [:index, :search, :searching]
 
   def index
     @posts = Post.includes(:user).order(created_at: :desc)
@@ -50,14 +50,15 @@ class PostsController < ApplicationController
   end
 
   def search
-    @tag_list = Tag.all
     @tag = Tag.find(params[:tag_id])
     @posts = @tag.posts.all
+    @tag_list = Tag.all
+    @results = @q.result.order(created_at: :desc)
   end
 
   def searching
-    @results = @q.result.order(created_at: :desc)
     @tag_list = Tag.all
+    @results = @q.result.order(created_at: :desc)
   end
 
   private
