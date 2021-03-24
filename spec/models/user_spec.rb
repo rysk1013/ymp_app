@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
         expect(@user).to be_valid
       end
 
-      it 'profileが空でも登録できる' do
+      it 'profileが空でも登録できること' do
         @user.profile = ''
         expect(@user).to be_valid
       end
