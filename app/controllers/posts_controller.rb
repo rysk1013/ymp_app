@@ -52,12 +52,12 @@ class PostsController < ApplicationController
   def search
     @tag = Tag.find(params[:tag_id])
     @posts = @tag.posts.all
-    @tag_list = Tag.all
+    @tag_list = Tag.all.order(created_at: :desc)
     @results = @q.result.order(created_at: :desc)
   end
 
   def searching
-    @tag_list = Tag.all
+    @tag_list = Tag.all.order(created_at: :desc)
     @results = @q.result.order(created_at: :desc)
   end
 
