@@ -1,0 +1,12 @@
+footer {
+  background-color: #000;
+  color: #eee;
+  width: 100vw;
+  height: 70px;
+}
+
+.copyrights {
+  text-align: center;
+  line-height: 70px;
+  font-size: 15px;
+}
