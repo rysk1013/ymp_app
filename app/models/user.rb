@@ -13,4 +13,11 @@ class User < ApplicationRecord
   validates_format_of :password, {with: PASSWORD_REGEX, message: 'Include both letters and numbers', on: :create}
 
   validates :nickname, presence: true, uniqueness: true
+
+  private
+  def self.guest
+    find_or_create_by!(email: 'guest@email.com', nickname: 'ゲストユーザー') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
 end
