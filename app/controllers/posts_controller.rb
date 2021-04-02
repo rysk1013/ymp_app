@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :set_already_like, only: [:show], if: :user_signed_in?
   before_action :set_q, only: [:index, :search, :searching]
+  before_action :ensuer_correct_user, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.includes(:user).order(created_at: :desc)
@@ -77,5 +78,9 @@ class PostsController < ApplicationController
 
   def set_already_like
     @already_like = Like.find_by(post_id:params[:id], user_id: current_user.id)
+  end
+
+  def ensuer_correct_user
+    redirect_to root_path if current_user.id != @post.user_id
   end
 end
