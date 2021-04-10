@@ -1,11 +1,11 @@
-# Your Master Pieces
+# YourMasterPieces
 
 ## アプリの概要
 自分の作ったポートフォリオを投稿できるアプリケーションです。
 ポートフォリオをこれから作る人、作成しているが機能に悩んでいる人が
 参考にすることができます！
 
-#### URL
+#### ポートフォリオへのリンク
 [YourMasterPieces](http://54.168.6.107:3000/)
 
 #### テストアカウント
@@ -20,7 +20,8 @@
 
 ## 使用技術
 - フロントエンド
-  - HTML/CSS
+  - HTML
+  - CSS
   - Javascript
 - バックエンド
   - Ruby: 2.6.5
@@ -37,6 +38,9 @@
   - AWS(VPC, Rout53, RDS)
   - Docker/docker-compose
   - CircleCI(CI/CD)
+
+   - ※テスト用で作成したアプリではDocker/docker-composeとCircleCIの導入ができました。
+    テストアプリのGithub: https://github.com/rysk1013/chat-app
 
 ## 実装機能
 - ユーザー管理機能
