@@ -2,3 +2,11 @@
   width: 300px;
   padding: 10px;
 }
+
+/* タブレット表示 */
+@media (max-width: 1024px) {
+  .right-container {
+    width: 880px;
+    padding: 10px;
+  }
+}
