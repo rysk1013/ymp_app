@@ -70,3 +70,12 @@
   display: inline-block;
   color: #87CEFA;
 }
+
+/* タブレット表示 */
+@media (max-width: 1024px) {
+  .inner {
+    width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+  }
+}
