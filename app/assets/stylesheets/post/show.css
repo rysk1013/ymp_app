@@ -48,3 +48,17 @@
 .url-wrapper a:hover {
   opacity: 0.5;
 }
+
+@media (max-width: 1024px) {
+  .post-show {
+    width: 768px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .post-show-img {
+    width: 708px;
+    height: 400px;
+    margin-bottom: 20px;
+  }
+}
