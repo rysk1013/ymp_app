@@ -106,7 +106,7 @@
 /* タブレット表示 */
 @media (max-width: 1024px) {
   .container {
-    width: 900px;
+    width: 768px;
     margin: 0 auto;
     padding: 10px;
     display: flex;
@@ -114,12 +114,12 @@
   }
 
   .left-container {
-    width: 880px;
+    width: 748px;
     padding: 10px;
   }
   
   .post-img {
-    width: 840px;
+    width: 708px;
     height: 400px;
     margin-bottom: 20px;
   }

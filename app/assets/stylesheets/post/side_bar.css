@@ -6,7 +6,7 @@
 /* タブレット表示 */
 @media (max-width: 1024px) {
   .right-container {
-    width: 880px;
+    width: 748px;
     padding: 10px;
   }
 }
