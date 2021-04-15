@@ -10,10 +10,6 @@
   padding: 30px;
 }
 
-.user-show-upper {
-  margin-bottom: 30px;
-}
-
 .user-show-heading {
   font-size: 30px;
   border-bottom: 1px solid #333;
@@ -25,7 +21,7 @@
   display: flex;
   font-size: 20px;
   padding: 20px;
-  margin-bottom: 30px;
+  margin: 30px 0;
   border-bottom: 1px solid #333;
 }
 
@@ -124,7 +120,7 @@
 /* タブレット表示 */
 @media (max-width: 1024px) {
   .user-show-wrapper {
-    width: 900px;
+    width: 708px;
     margin: 0 auto;
     padding: 20px;
     background-color: #ededed;

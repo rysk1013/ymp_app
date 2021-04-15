@@ -33,9 +33,6 @@
   height: 60px;
 }
 
-.nav-right {
-}
-
 .nav-btn {
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -74,7 +71,7 @@
 /* タブレット表示 */
 @media (max-width: 1024px) {
   .inner {
-    width: 900px;
+    width: 768px;
     margin: 0 auto;
     padding: 0 20px 0 20px;
   }
