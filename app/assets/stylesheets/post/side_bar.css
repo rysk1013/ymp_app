@@ -10,3 +10,11 @@
     padding: 10px;
   }
 }
+
+/* スマートフォン表示 */
+@media (max-width: 570px) {
+  .right-container {
+    width: 300px;
+    padding: 10px;
+  }
+}

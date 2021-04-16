@@ -12,3 +12,12 @@
 .like {
   color: yellow;
 }
+
+@media (max-width: 570px) {
+  .likes {
+    font-size: 14px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+  }
+}

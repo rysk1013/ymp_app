@@ -76,3 +76,50 @@
     padding: 0 20px 0 20px;
   }
 }
+
+/* スマートフォン表示 */
+@media (max-width: 570px) {
+  .inner {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-right {
+    width: 47%;
+  }
+
+  .nav-right a:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
+  .logo-img {
+    width: 90px;
+    height: 96px;
+  }
+
+  .current-user-name {
+    display: inline-block;
+    color: #87CEFA;
+    font-size: 14px;
+    border: 1px solid #87CEFA;
+  }
+  
+  .nav-logout {
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    font-size: 0.8em;
+    color: #87CEFA;
+    text-decoration: none;
+    user-select: none;
+    border: 1px solid #87CEFA;
+    margin-top: 7px;
+  }
+}

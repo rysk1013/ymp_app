@@ -135,3 +135,43 @@
     transition: all 0.3s;
   }
 }
+
+/* スマートフォン表示 */
+@media (max-width: 570px) {
+  .user-show-wrapper {
+    width: 260px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ededed;
+    box-shadow: 4px 4px 6px;
+  }
+
+  .name-img-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .not-correct-user {
+    display: block;
+    width: 100%;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 150px;
+  }
+
+  .user-show-name h2 {
+    margin-right: 0;
+    padding: 20px;
+  }
+
+  .content {
+    width: 260px;
+    height: 366.66px;
+    margin-bottom: 20px;
+    background-color: #ededed;
+    transition: all 0.3s;
+  }
+}

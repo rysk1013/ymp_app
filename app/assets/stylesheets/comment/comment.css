@@ -29,3 +29,18 @@
 .hidden {
   display: none;
 }
+
+/* スマートフォン表示 */
+@media (max-width: 570px) {
+  .text {
+    width: 95%;
+    border: 1px solid #333;
+    height: 100px;
+    margin: 10px 0 0 0;
+    padding: 10px;
+  }
+
+  .comments-lists {
+    padding: 0;
+  }
+}

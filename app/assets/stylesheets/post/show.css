@@ -49,6 +49,7 @@
   opacity: 0.5;
 }
 
+/* タブレット表示 */
 @media (max-width: 1024px) {
   .post-show {
     width: 768px;
@@ -59,6 +60,21 @@
   .post-show-img {
     width: 708px;
     height: 400px;
+    margin-bottom: 20px;
+  }
+}
+
+/* スマートフォン表示 */
+@media (max-width: 570px) {
+  .post-show {
+    width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .post-show-img {
+    width: 260px;
+    height: 260px;
     margin-bottom: 20px;
   }
 }
