@@ -124,3 +124,30 @@
     margin-bottom: 20px;
   }
 }
+
+/* スマートフォン表示 */
+@media (max-width: 570px) {
+  .container {
+    width: 320px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .left-container {
+    width: 300px;
+    padding: 10px;
+  }
+  
+  .post-img {
+    width: 260px;
+    height: 260px;
+    margin-bottom: 20px;
+  }
+
+  .post-title {
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+}
