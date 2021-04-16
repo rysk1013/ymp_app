@@ -134,9 +134,21 @@
   font-weight: bold;
 }
 
+/* タブレット表示 */
+@media (max-width: 1024px) {
+.registration-wrapper,
+.login-wrapper {
+  width: 100%;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  background-color: #ededed;
+  box-shadow: 4px 4px 6px;
+}
+}
+
 /* スマートフォン表示 */
 @media (max-width: 570px) {
-  .registration-wrapper,
+.registration-wrapper,
 .login-wrapper {
   width: 100%;
   padding-bottom: 30px;
