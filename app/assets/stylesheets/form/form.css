@@ -55,3 +55,22 @@
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
+
+/* スマートフォン表示 */
+@media (max-width: 570px) {
+  .form-wrapper{
+    width: 100%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ededed;
+    box-shadow: 4px 4px 6px;
+  }
+
+  .input-image {
+    font-size: 14px;
+  }
+
+  .tag-exp p:last-child {
+    font-size: 14px;
+  }
+}
