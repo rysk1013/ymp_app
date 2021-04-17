@@ -46,7 +46,8 @@ Herokuでのデプロイではレスポンスが遅く、また、投稿した�
   - CircleCI(CI/CD)
 
    - ※テスト用で作成したアプリではDocker/docker-composeとCircleCIの導入ができました。
-    テストアプリのGithub: https://github.com/rysk1013/chat-app
+    テストアプリのGithub:  
+    https://github.com/rysk1013/chat-app
 
 ## 実装機能
 - ユーザー管理機能
